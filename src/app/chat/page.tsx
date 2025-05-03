@@ -162,7 +162,7 @@ const Chat = () => {
                         <iframe
                             src="https://player.twitch.tv/?channel=gaules&parent=localhost&autoplay=true&pip=true"
                             height="300"
-                            width="500"
+                            width="300"
                             allowFullScreen
                             allow="picture-in-picture"
                             className="rounded-lg"

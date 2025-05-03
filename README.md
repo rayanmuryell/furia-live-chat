@@ -2,7 +2,7 @@
 
 Um chat ao vivo em tempo real para os fãs da FURIA eSports interagirem entre si, feito com **Next.js + TypeScript** e **WebSocket (Socket.IO)**.
 
-
+Vídeo demonstrando a aplicação: https://youtu.be/Vh46efceRqk
 ---
 
 ## 🚀 Funcionalidades
@@ -12,7 +12,7 @@ Um chat ao vivo em tempo real para os fãs da FURIA eSports interagirem entre si
 - Sistema de moderação com exclusão de mensagens
 - Mensagens automatizadas do bot
 - Design com vídeo de fundo, animações e visual moderno
-- Chat com versão responsiva
+- Chat com versão responsiva/mobile
 
 ---
 
@@ -33,7 +33,7 @@ Um chat ao vivo em tempo real para os fãs da FURIA eSports interagirem entre si
 
 ```bash
 git clone https://github.com/rayanmuryell/furia-fan-chat.git
-cd furia-fan-chat
+cd furia-live-chat
 ```
 
 ### 2. Instale as dependências
@@ -56,11 +56,38 @@ cp .env.example .env
 
 ### 2. Edite `.env` com suas credenciais:
 
+
+Para gerar o seu GOOGLE TOKENS, veja esse vídeo abaixo para auxiliar:
+https://youtu.be/D8DMj2lQMwo
+
+Em "URIs de redirecionamento autorizados" você precisa adicionar o endereço abaixo:
+
+http://localhost:3000/api/auth/callback/google
+
+OU
+
+http://127.0.0.1:3000/api/auth/callback/google
+
+Depende de como a sua aplicação está subindo. Recomendo a inclusão dos dois.
+
+```bash
+
+```
+
+
+
+Para criar a sua NEXTAUTH_SECRET use o comando abaixo e altere no seu .ENV 
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+```
+
+
+
 ```env
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 NEXTAUTH_SECRET=your-nextauth-secret
-NEXTAUTH_URL=http://localhost:3000 # Para desenvolvimento
+NEXTAUTH_URL=http://localhost:3000 # Para desenvolvimento, deixe como está.
 ```
 
 ---
@@ -70,14 +97,7 @@ NEXTAUTH_URL=http://localhost:3000 # Para desenvolvimento
 ### 1. Inicie o servidor WebSocket (backend)
 
 ```bash
-npm install
 npm run websocket
-```
-
-Ou, se estiver usando TypeScript:
-
-```bash
-ts-node src/index.ts
 ```
 
 > Certifique-se de que o servidor está rodando na porta `3001`.
@@ -120,7 +140,6 @@ Acesse: [http://localhost:3000](http://localhost:3000)
                 └── LeftSideBar.tsx
                 └── LoginModal.tsx
                 └── PlayerCard.tsx
-                └── Tab.tsx
             └── favicon.ico
             └── globals.css
             └── layout.tsx

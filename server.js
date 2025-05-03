@@ -13,7 +13,7 @@ const io = new Server(server, {
 
 let messages = [];
 const userRoles = {
-    "e-mail_do_moderador@email.com": "moderator", // E-mail do moderador
+    "teu-email@gmail.com": "moderator", // E-mail do moderador
 };
 
 io.on("connection", (socket) => {
@@ -44,7 +44,7 @@ io.on("connection", (socket) => {
     });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 server.listen(PORT, () => {
     console.log(`Servidor WebSocket rodando na porta ${PORT}`);
 });

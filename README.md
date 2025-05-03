@@ -1,8 +1,13 @@
-# 🐾 Fan Chat da FURIA
+# 👑 FURIA LIVE CHAT
 
 Um chat ao vivo em tempo real para os fãs da FURIA eSports interagirem entre si, feito com **Next.js + TypeScript** e **WebSocket (Socket.IO)**.
 
 Vídeo demonstrando a aplicação: https://youtu.be/Vh46efceRqk
+
+
+![Chat](https://i.imgur.com/ySTHlop.png)
+![Landing Page](https://i.imgur.com/egyYSmh.png)
+
 ---
 
 ## 🚀 Funcionalidades
@@ -32,7 +37,7 @@ Vídeo demonstrando a aplicação: https://youtu.be/Vh46efceRqk
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/rayanmuryell/furia-fan-chat.git
+git clone https://github.com/rayanmuryell/furia-live-chat.git
 cd furia-live-chat
 ```
 
@@ -70,9 +75,7 @@ http://127.0.0.1:3000/api/auth/callback/google
 
 Depende de como a sua aplicação está subindo. Recomendo a inclusão dos dois.
 
-```bash
-
-```
+---
 
 
 
